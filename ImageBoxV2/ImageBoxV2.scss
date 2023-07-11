@@ -1,0 +1,85 @@
+@import '../../scss/variables.scss';
+@import '../../scss/typography.scss';
+
+.image-v2-box-block {
+  cursor: pointer;
+  position: relative;
+  background: $white;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 1;
+  border-bottom: 2px solid transparent;
+  transition: .5s all;
+  text-decoration: none;
+}
+
+.image-v2-box-overlay {
+  content: '';
+  background-size: cover !important;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-v2-box-bg {
+  content: '';
+  overflow: hidden;
+  background-size: cover !important;
+  height: 60%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-v2-box-cta {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.image-v2-box-block:hover .image-v2-box-darker-bg {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.image-v2-box-block .image-v2-box-bg .image-v2-box-cta {
+  transition: all .5s ease-out 0s;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.image-v2-box-block .image-v2-box-bg .image-v2-box-cta a {
+  display: none
+}
+
+.image-v2-box-block:hover .image-v2-box-bg .image-v2-box-cta {
+  background: rgba(0,0,0, 0.5);
+  display: block;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+.image-v2-box-block:hover .image-v2-box-bg .image-v2-box-cta a {
+  display: block;
+}
+
+.image-v2-box-block h3 {
+  color: $primary-700;
+}
+
+.image-v2-box-block:hover h3 {
+  color: $primary;
+}
+
+.image-v2-box-block p {
+  color: $primary-700;
+}
+
+.image-v2-box-block:hover p {
+  color: $primary;
+}
